@@ -8,7 +8,8 @@ import { ServerComponent } from './server/server.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ServerComponent
+    ServerComponent,
+    random
   ],
   imports: [
     BrowserModule,
