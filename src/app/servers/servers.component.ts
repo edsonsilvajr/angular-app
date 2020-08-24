@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
   allowNewServer = false;
-  username = "";
+  serverName = "";
+  serverCreated = false;
   
   constructor() { 
     setTimeout(()=>{
@@ -15,17 +16,11 @@ export class ServersComponent implements OnInit {
     },2000);
   }
 
-  checkUser(): boolean{
-    if(this.username != ""){
-      return true;
-    }else return false;
-  }
-
-  onUserAdd(): void{
-    this.username = "";
-  }
-
   ngOnInit(): void {
+  }
+
+  onCreateServer(){
+    this.serverCreated = true;
   }
 
 }
