@@ -1,0 +1,13 @@
+<label>Your name:</label>
+<input type="text"
+  class="form-control"
+  [(ngModel)] = "username"
+>
+<p>{{username}}</p>
+<button 
+  class="btn btn-primary"
+  [disabled]="!checkUser()"
+  (click)="onUserAdd()"
+>Add server</button>
+<app-server></app-server>
+<app-server></app-server>
