@@ -11,16 +11,21 @@
     <label>Server Content</label>
     <!-- <input type="text" class="form-control" [(ngModel)]="newServerContent"> -->
     <input 
+      type="text" 
+      class="form-control" 
+      #serverContent
+    >
+    <!-- <input 
       type="text"
       class="form-control"
       #serverContent 
-    >
+    > -->
     <br>
     <button
       class="btn btn-primary"
-      (click)="onAddServer(serverName,serverContent)">Add Server</button>
+      (click)="onAddServer(serverName)">Add Server</button>
     <button
       class="btn btn-primary"
-      (click)="onAddBlueprint(serverName,serverContent)">Add Server Blueprint</button>
+      (click)="onAddBlueprint(serverName)">Add Server Blueprint</button>
   </div>
 </div>
