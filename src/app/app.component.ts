@@ -6,5 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-app';
+  serverElements = [];
+
+  onServerCreated(event: {serverName: string, serverContent: string}){
+    this.serverElements.push({
+      type: "server",
+      name: event.serverName,
+      content: event.serverContent
+    })
+  }
+
+  onBpCreated(event: {serverName: string, serverContent: string}){
+    this.serverElements.push({
+      type:"blueprint",
+      name: event.serverName,
+      content: event.serverContent
+    })
+  }
 }
